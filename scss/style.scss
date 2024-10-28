@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+body {
+  background-color: #3f72af;
+}
+.section__content {
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  h1 {
+    font-size: 60px;
+  }
+  .input {
+    justify-content: center;
+    display: flex;
+    input {
+      width: 400px;
+      padding: 15px 200px 15px 23px;
+      font-size: 20px;
+    }
+    button {
+      padding: 20px;
+      background-color: rgb(90, 236, 64);
+    }
+    input::placeholder {
+      font-size: 20px;
+    }
+  }
+}
