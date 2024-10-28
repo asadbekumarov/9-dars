@@ -4,36 +4,81 @@
   box-sizing: border-box;
 }
 .container {
+  width: 1016px;
   margin: 0 auto;
-  max-width: 1000px;
+  padding: 0 16px;
 }
 body {
-  background-color: #3f72af;
+  background-color: #fafafa;
+}
+header {
+  h1 {
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 .section__content {
-  margin-top: 100px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 20px;
-  h1 {
-    font-size: 60px;
-  }
-  .input {
-    justify-content: center;
+  display: flex;
+  gap: 100px;
+  align-items: start;
+  .new {
     display: flex;
+    flex-direction: column;
+    h2 {
+      margin-top: 80px;
+      padding-bottom: 20px;
+      font-size: 30px;
+      font-weight: 600;
+      font-family: sans-serif;
+    }
     input {
-      width: 400px;
-      padding: 15px 200px 15px 23px;
-      font-size: 20px;
+      margin-bottom: 20px;
+      padding: 10px 300px 10px 10px;
+      border: 1px solid #e2e2e2;
+      border-radius: 5px;
+      outline: none;
+    }
+    ::placeholder {
+      font-family: sans-serif;
+      color: #8c8f96;
+      font-size: 15px;
     }
     button {
-      padding: 20px;
-      background-color: rgb(90, 236, 64);
+      padding: 10px;
+      border: none;
+      color: #fff;
+      font-size: 15px;
+      background-color: #008efd;
+      font-family: sans-serif;
+      border-radius: 5px;
     }
-    input::placeholder {
-      font-size: 20px;
+  }
+  .contactWin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h2 {
+      font-family: sans-serif;
+      margin-top: 80px;
+      margin-bottom: 20px;
+    }
+  }
+  #result {
+    .contact {
+      margin-bottom: 20px;
+      border: 2px solid #b32424 !important;
+      text-align: start;
+      border-radius: 5px;
+      width: 290px;
+      height: 95px;
+      padding-left: 10px;
+      padding-top: 10px;
+      background-color: #ffffff;
+      gap: 20px;
     }
   }
 }

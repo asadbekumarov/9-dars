@@ -323,390 +323,391 @@ console.log("start");
 
 // desturacturing  object va array
 
-const eCommerceStore = {
-  storeName: "Tech Market",
-  location: {
-    country: "Shopland",
-    city: "Retail City",
-    address: {
-      street: "456 Commerce St",
-      zipCode: "45678",
-    },
-    departments: [
-      {
-        name: "Electronics",
-        head: "Alice Johnson",
-        products: [
-          {
-            id: 1,
-            name: "Laptop",
-            brand: "TechBrand",
-            specs: {
-              processor: "Intel i7",
-              memory: "16GB",
-              storage: "512GB SSD",
-            },
-            price: 1200,
-            stock: {
-              available: 35,
-              reserved: 5,
-            },
-          },
-          {
-            id: 2,
-            name: "Smartphone",
-            brand: "PhoneCorp",
-            specs: {
-              processor: "Snapdragon 888",
-              memory: "8GB",
-              storage: "128GB",
-            },
-            price: 900,
-            stock: {
-              available: 100,
-              reserved: 20,
-            },
-          },
-        ],
-      },
-      {
-        name: "Home Appliances",
-        head: "Bob Smith",
-        products: [
-          {
-            id: 3,
-            name: "Refrigerator",
-            brand: "HomeCool",
-            specs: {
-              capacity: "300L",
-              energyRating: "4 stars",
-            },
-            price: 800,
-            stock: {
-              available: 10,
-              reserved: 2,
-            },
-          },
-          {
-            id: 4,
-            name: "Washing Machine",
-            brand: "CleanIt",
-            specs: {
-              capacity: "7kg",
-              type: "Front Load",
-            },
-            price: 600,
-            stock: {
-              available: 15,
-              reserved: 3,
-            },
-          },
-        ],
-      },
-    ],
-  },
-  employees: {
-    managers: [
-      {
-        name: "John Doe",
-        department: "Electronics",
-        contact: {
-          phone: "123-456-7890",
-          email: "john@techmarket.com",
-        },
-      },
-      {
-        name: "Jane Smith",
-        department: "Home Appliances",
-        contact: {
-          phone: "321-654-0987",
-          email: "jane@techmarket.com",
-        },
-      },
-    ],
-    sales: [
-      {
-        name: "Tom Hardy",
-        department: "Electronics",
-        contact: {
-          phone: "111-222-3333",
-          email: "tom@techmarket.com",
-        },
-      },
-      {
-        name: "Emily Blunt",
-        department: "Home Appliances",
-        contact: {
-          phone: "444-555-6666",
-          email: "emily@techmarket.com",
-        },
-      },
-    ],
-  },
-  promotions: {
-    current: [
-      {
-        id: "PROMO1",
-        name: "Spring Sale",
-        discount: "10%",
-        applicableProducts: [1, 2],
-      },
-      {
-        id: "PROMO2",
-        name: "Summer Clearance",
-        discount: "15%",
-        applicableProducts: [3, 4],
-      },
-    ],
-    upcoming: [
-      {
-        id: "PROMO3",
-        name: "Fall Sale",
-        discount: "20%",
-        applicableProducts: [1, 4],
-      },
-    ],
-  },
-  orderHistory: [
-    {
-      orderId: "ORD001",
-      customer: {
-        name: "Michael Scott",
-        contact: {
-          phone: "123-789-4560",
-          email: "michael@dundermifflin.com",
-        },
-      },
-      items: [
-        {
-          productId: 1,
-          quantity: 1,
-          pricePerUnit: 1200,
-        },
-        {
-          productId: 3,
-          quantity: 2,
-          pricePerUnit: 800,
-        },
-      ],
-      totalAmount: 2800,
-      status: "Delivered",
-    },
-    {
-      orderId: "ORD002",
-      customer: {
-        name: "Pam Beesly",
-        contact: {
-          phone: "456-123-7890",
-          email: "pam@dundermifflin.com",
-        },
-      },
-      items: [
-        {
-          productId: 2,
-          quantity: 1,
-          pricePerUnit: 900,
-        },
-      ],
-      totalAmount: 900,
-      status: "Pending",
-    },
-  ],
-};
+// const eCommerceStore = {
+//   storeName: "Tech Market",
+//   location: {
+//     country: "Shopland",
+//     city: "Retail City",
+//     address: {
+//       street: "456 Commerce St",
+//       zipCode: "45678",
+//     },
+//     departments: [
+//       {
+//         name: "Electronics",
+//         head: "Alice Johnson",
+//         products: [
+//           {
+//             id: 1,
+//             name: "Laptop",
+//             brand: "TechBrand",
+//             specs: {
+//               processor: "Intel i7",
+//               memory: "16GB",
+//               storage: "512GB SSD",
+//             },
+//             price: 1200,
+//             stock: {
+//               available: 35,
+//               reserved: 5,
+//             },
+//           },
+//           {
+//             id: 2,
+//             name: "Smartphone",
+//             brand: "PhoneCorp",
+//             specs: {
+//               processor: "Snapdragon 888",
+//               memory: "8GB",
+//               storage: "128GB",
+//             },
+//             price: 900,
+//             stock: {
+//               available: 100,
+//               reserved: 20,
+//             },
+//           },
+//         ],
+//       },
+//       {
+//         name: "Home Appliances",
+//         head: "Bob Smith",
+//         products: [
+//           {
+//             id: 3,
+//             name: "Refrigerator",
+//             brand: "HomeCool",
+//             specs: {
+//               capacity: "300L",
+//               energyRating: "4 stars",
+//             },
+//             price: 800,
+//             stock: {
+//               available: 10,
+//               reserved: 2,
+//             },
+//           },
+//           {
+//             id: 4,
+//             name: "Washing Machine",
+//             brand: "CleanIt",
+//             specs: {
+//               capacity: "7kg",
+//               type: "Front Load",
+//             },
+//             price: 600,
+//             stock: {
+//               available: 15,
+//               reserved: 3,
+//             },
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   employees: {
+//     managers: [
+//       {
+//         name: "John Doe",
+//         department: "Electronics",
+//         contact: {
+//           phone: "123-456-7890",
+//           email: "john@techmarket.com",
+//         },
+//       },
+//       {
+//         name: "Jane Smith",
+//         department: "Home Appliances",
+//         contact: {
+//           phone: "321-654-0987",
+//           email: "jane@techmarket.com",
+//         },
+//       },
+//     ],
+//     sales: [
+//       {
+//         name: "Tom Hardy",
+//         department: "Electronics",
+//         contact: {
+//           phone: "111-222-3333",
+//           email: "tom@techmarket.com",
+//         },
+//       },
+//       {
+//         name: "Emily Blunt",
+//         department: "Home Appliances",
+//         contact: {
+//           phone: "444-555-6666",
+//           email: "emily@techmarket.com",
+//         },
+//       },
+//     ],
+//   },
+//   promotions: {
+//     current: [
+//       {
+//         id: "PROMO1",
+//         name: "Spring Sale",
+//         discount: "10%",
+//         applicableProducts: [1, 2],
+//       },
+//       {
+//         id: "PROMO2",
+//         name: "Summer Clearance",
+//         discount: "15%",
+//         applicableProducts: [3, 4],
+//       },
+//     ],
+//     upcoming: [
+//       {
+//         id: "PROMO3",
+//         name: "Fall Sale",
+//         discount: "20%",
+//         applicableProducts: [1, 4],
+//       },
+//     ],
+//   },
+//   orderHistory: [
+//     {
+//       orderId: "ORD001",
+//       customer: {
+//         name: "Michael Scott",
+//         contact: {
+//           phone: "123-789-4560",
+//           email: "michael@dundermifflin.com",
+//         },
+//       },
+//       items: [
+//         {
+//           productId: 1,
+//           quantity: 1,
+//           pricePerUnit: 1200,
+//         },
+//         {
+//           productId: 3,
+//           quantity: 2,
+//           pricePerUnit: 800,
+//         },
+//       ],
+//       totalAmount: 2800,
+//       status: "Delivered",
+//     },
+//     {
+//       orderId: "ORD002",
+//       customer: {
+//         name: "Pam Beesly",
+//         contact: {
+//           phone: "456-123-7890",
+//           email: "pam@dundermifflin.com",
+//         },
+//       },
+//       items: [
+//         {
+//           productId: 2,
+//           quantity: 1,
+//           pricePerUnit: 900,
+//         },
+//       ],
+//       totalAmount: 900,
+//       status: "Pending",
+//     },
+//   ],
+// };
 
-let {
-  storeName,
-  location: {
-    country,
-    city,
-    address: { street, zipCode },
-    departments: [
-      {
-        name,
-        head,
-        products: [
-          {
-            id,
-            name: name1,
-            brand,
-            specs: {
-              processor,
-              memory,
-              storage,
-              price,
-              stock: {
-                available,
-                reserved,
-                id: id1,
-                name: name2,
-                brand: brand1,
-                specs: {
-                  processor: processor1,
-                  memory: memory1,
-                  storage: storage1,
-                  price: price1,
-                  stock: stock1,
-                  stock1: {
-                    available: available1,
-                    reserved: reserved1,
-                    name: name3,
-                    head: head1,
-                    products: [
-                      {
-                        id: id2,
-                        name: name4,
-                        brand: brand2,
-                        specs: {
-                          capacity,
-                          energyRating,
-                          price: price2,
-                          stock: stock2,
-                          stock2: {
-                            available: available2,
-                            reserved: reserved2,
-                            id: id3,
-                            name: name5,
-                            brand: brand3,
-                            specs: {
-                              capacity: capacity1,
-                              type,
-                              price: price3,
-                              stock,
-                              stock: {
-                                available: available3,
-                                reserved: reserved3,
-                                employees: {
-                                  managers: [
-                                    {
-                                      name: name6,
-                                      department,
-                                      contact: {
-                                        phone,
-                                        email,
-                                        name: name7,
-                                        department: department1,
-                                        contact: {
-                                          phone: phone8,
-                                          email: email1,
-                                          sales: [
-                                            {
-                                              name: name10,
-                                              department: department2,
-                                              contact: {
-                                                phone: phone1,
-                                                email: email2,
-                                                name: name11,
-                                                department: department3,
-                                                contact: {
-                                                  phone: phone3,
-                                                  email: email3,
-                                                  promotions: {
-                                                    current: [
-                                                      {
-                                                        id: id4,
-                                                        name: name12,
-                                                        discount,
-                                                        applicableProducts,
-                                                        id: id5,
-                                                        name: name13,
-                                                        discount: discount1,
-                                                        applicableProducts:
-                                                          applicableProducts1,
-                                                        upcoming: [
-                                                          {
-                                                            id: id6,
-                                                            name: name14,
-                                                            discount: discount2,
-                                                            applicableProducts:
-                                                              applicableProducts2,
-                                                            orderHistory: [
-                                                              {
-                                                                orderId,
-                                                                customer: {
-                                                                  name: name15,
-                                                                  contact: {
-                                                                    phone:
-                                                                      phone2,
-                                                                    email:
-                                                                      email4,
-                                                                    items: [
-                                                                      {
-                                                                        productId,
-                                                                        quantity,
-                                                                        pricePerUnit,
-                                                                        productId:
-                                                                          productId1,
-                                                                        quantity:
-                                                                          quantity1,
-                                                                        pricePerUnit:
-                                                                          pricePerUnit1,
-                                                                        totalAmount,
-                                                                        status,
-                                                                        orderId:
-                                                                          orderId2,
-                                                                        customer:
-                                                                          {
-                                                                            name: nam16,
-                                                                            contact:
-                                                                              {
-                                                                                phone:
-                                                                                  phone4,
-                                                                                email:
-                                                                                  email5,
-                                                                                items:
-                                                                                  [
-                                                                                    {
-                                                                                      productId:
-                                                                                        productId2,
-                                                                                      quantity:
-                                                                                        quantity2,
-                                                                                      pricePerUnit:
-                                                                                        pricePerUnit2,
-                                                                                      totalAmount:
-                                                                                        totalAmount1,
-                                                                                      status:
-                                                                                        status1,
-                                                                                    },
-                                                                                  ],
-                                                                              },
-                                                                          },
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                },
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                },
-                                              },
-                                            },
-                                          ],
-                                        },
-                                      },
-                                    },
-                                  ],
-                                },
-                              },
-                            },
-                          },
-                        },
-                      },
-                    ],
-                  },
-                },
-              },
-            },
-          },
-        ],
-      },
-    ],
-  },
-} = eCommerceStore;
+// let {
+//   storeName,
+//   location: {
+//     country,
+//     city,
+//     address: { street, zipCode },
+//     departments: [
+//       {
+//         name,
+//         head,
+//         products: [
+//           {
+//             id,
+//             name: name1,
+//             brand,
+//             specs: {
+//               processor,
+//               memory,
+//               storage,
+//               price,
+//               stock: {
+//                 available,
+//                 reserved,
+//                 id: id1,
+//                 name: name2,
+//                 brand: brand1,
+//                 specs: {
+//                   processor: processor1,
+//                   memory: memory1,
+//                   storage: storage1,
+//                   price: price1,
+//                   stock: stock1,
+//                   stock1: {
+//                     available: available1,
+//                     reserved: reserved1,
+//                     name: name3,
+//                     head: head1,
+//                     products: [
+//                       {
+//                         id: id2,
+//                         name: name4,
+//                         brand: brand2,
+//                         specs: {
+//                           capacity,
+//                           energyRating,
+//                           price: price2,
+//                           stock: stock2,
+//                           stock2: {
+//                             available: available2,
+//                             reserved: reserved2,
+//                             id: id3,
+//                             name: name5,
+//                             brand: brand3,
+//                             specs: {
+//                               capacity: capacity1,
+//                               type,
+//                               price: price3,
+//                               stock,
+//                               stock: {
+//                                 available: available3,
+//                                 reserved: reserved3,
+//                                 employees: {
+//                                   managers: [
+//                                     {
+//                                       name: name6,
+//                                       department,
+//                                       contact: {
+//                                         phone,
+//                                         email,
+//                                         name: name7,
+//                                         department: department1,
+//                                         contact: {
+//                                           phone: phone8,
+//                                           email: email1,
+//                                           sales: [
+//                                             {
+//                                               name: name10,
+//                                               department: department2,
+//                                               contact: {
+//                                                 phone: phone1,
+//                                                 email: email2,
+//                                                 name: name11,
+//                                                 department: department3,
+//                                                 contact: {
+//                                                   phone: phone3,
+//                                                   email: email3,
+//                                                   promotions: {
+//                                                     current: [
+//                                                       {
+//                                                         id: id4,
+//                                                         name: name12,
+//                                                         discount,
+//                                                         applicableProducts,
+//                                                         id: id5,
+//                                                         name: name13,
+//                                                         discount: discount1,
+//                                                         applicableProducts:
+//                                                           applicableProducts1,
+//                                                         upcoming: [
+//                                                           {
+//                                                             id: id6,
+//                                                             name: name14,
+//                                                             discount: discount2,
+//                                                             applicableProducts:
+//                                                               applicableProducts2,
+//                                                             orderHistory: [
+//                                                               {
+//                                                                 orderId,
+//                                                                 customer: {
+//                                                                   name: name15,
+//                                                                   contact: {
+//                                                                     phone:
+//                                                                       phone2,
+//                                                                     email:
+//                                                                       email4,
+//                                                                     items: [
+//                                                                       {
+//                                                                         productId,
+//                                                                         quantity,
+//                                                                         pricePerUnit,
+//                                                                         productId:
+//                                                                           productId1,
+//                                                                         quantity:
+//                                                                           quantity1,
+//                                                                         pricePerUnit:
+//                                                                           pricePerUnit1,
+//                                                                         totalAmount,
+//                                                                         status,
+//                                                                         orderId:
+//                                                                           orderId2,
+//                                                                         customer:
+//                                                                           {
+//                                                                             name: nam16,
+//                                                                             contact:
+//                                                                               {
+//                                                                                 phone:
+//                                                                                   phone4,
+//                                                                                 email:
+//                                                                                   email5,
+//                                                                                 items:
+//                                                                                   [
+//                                                                                     {
+//                                                                                       productId:
+//                                                                                         productId2,
+//                                                                                       quantity:
+//                                                                                         quantity2,
+//                                                                                       pricePerUnit:
+//                                                                                         pricePerUnit2,
+//                                                                                       totalAmount:
+//                                                                                         totalAmount1,
+//                                                                                       status:
+//                                                                                         status1,
+//                                                                                     },
+//                                                                                   ],
+//                                                                               },
+//                                                                           },
+//                                                                       },
+//                                                                     ],
+//                                                                   },
+//                                                                 },
+//                                                               },
+//                                                             ],
+//                                                           },
+//                                                         ],
+//                                                       },
+//                                                     ],
+//                                                   },
+//                                                 },
+//                                               },
+//                                             },
+//                                           ],
+//                                         },
+//                                       },
+//                                     },
+//                                   ],
+//                                 },
+//                               },
+//                             },
+//                           },
+//                         },
+//                       },
+//                     ],
+//                   },
+//                 },
+//               },
+//             },
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// } = eCommerceStore;
 
+// QOSHIMCHA
 // -------------------------------------------------------
 // -------------------------------------------------------
 // -------------------------------------------------------
@@ -726,5 +727,30 @@ let {
 // -------------------------------------------------------
 // -------------------------------------------------------
 // -------------------------------------------------------
+
+const Elinput1 = document.querySelector("#input1");
+const Elinput2 = document.querySelector("#input2");
+const Elinput3 = document.querySelector("#input3");
+const Elbtn = document.querySelector("#btn1");
+const Elresult = document.querySelector("#result");
+
+Elbtn.addEventListener("click", function () {
+  const newCard = document.createElement("div");
+  const newTitle = document.createElement("h1");
+  const newParaghraph = document.createElement("p");
+  const newNumber = document.createElement("p");
+
+  newCard.className = "contact";
+  newTitle.textContent = Elinput1.value;
+  newParaghraph.textContent = Elinput2.value;
+  newNumber.textContent = Number(Elinput3.value);
+
+  newCard.appendChild(newTitle);
+  newCard.appendChild(newParaghraph);
+  newCard.appendChild(newNumber);
+  Elresult.appendChild(newCard);
+
+  newNumber.style.color = "blue";
+});
 
 console.warn("end");
